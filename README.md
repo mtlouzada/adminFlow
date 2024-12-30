@@ -1,50 +1,34 @@
-# React + TypeScript + Vite
+# Admin Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um projeto de dashboard administrativo desenvolvido com **Vite**, **TypeScript** e **SASS**, implementando funcionalidades essenciais como autenticação, CRUD, níveis de acesso e upload de imagem.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Autenticação**:
+  - Login com verificação de token.
+  - Proteção de rotas baseadas em autenticação.
 
-## Expanding the ESLint configuration
+- **CRUD (Create, Read, Update, Delete)**:
+  - Gerenciamento de dados com integração ao backend.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Níveis de Acesso**:
+  - Controle de permissões por tipo de usuário (admin, usuário comum, etc.).
 
-- Configure the top-level `parserOptions` property like this:
+- **Upload de Imagem**:
+  - Suporte ao envio de arquivos para o backend.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Estilização**:
+  - Utilização de **SASS** para organização e reutilização de estilos.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Tecnologias Utilizadas
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **Frontend**:
+  - [Vite](https://vitejs.dev/): Build tool rápido e moderno.
+  - [React](https://reactjs.org/): Biblioteca para construção da interface do usuário.
+  - [TypeScript](https://www.typescriptlang.org/): Superset do JavaScript para maior segurança no código.
+  - [SASS](https://sass-lang.com/): Pré-processador CSS.
+  - [React Router DOM](https://reactrouter.com/): Gerenciamento de rotas.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Bibliotecas Adicionais**:
+  - `axios`: Para comunicação com o backend.
+  - `zustand`: Para gerenciamento de estado global.
